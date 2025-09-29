@@ -20,8 +20,9 @@ MODEL_FILE = "expense_model.pkl"
 def train_model(df):
     """Train text classifier to predict expense category"""
     df = df.dropna(subset=["description", "category"])
-    if df.empty:
-        return None
+    if df.empty or df["category"].nunique() < 2:
+        return None   # Not enough data/classes to train
+    
     X = df["description"]
     y = df["category"]
     
