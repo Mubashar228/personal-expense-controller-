@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -128,4 +128,4 @@ if not df.empty:
     st.pyplot(fig)
 else:
     st.info("Please add some expenses to see results.")
-```
+
