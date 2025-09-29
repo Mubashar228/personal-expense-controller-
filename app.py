@@ -127,4 +127,3 @@ if uploaded_file:
             st.warning("⚠️ No model trained yet. Upload data with 'category' column to train.")
 else:
     st.info("Please upload a CSV file to begin. Example columns: date, description, amount, category")
-```
