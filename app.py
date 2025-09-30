@@ -1,4 +1,4 @@
-```python
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -135,4 +135,3 @@ else:
     ax4.set_ylabel("Expense (PKR)")
     ax4.legend()
     st.pyplot(fig4)
-```
