@@ -179,7 +179,8 @@ st.sidebar.write("Forecast engine:", "Prophet" if USE_PROPHET else "LinearRegres
 st.sidebar.write("Tip: If Prophet is not installed and you want seasonal forecasts, add `prophet` to requirements.")
 st.sidebar.markdown("---")
 if st.sidebar.button("Apply recurring to this month"):
-    current_month = pd.Timestamp.today().to_period("M").astype(str)
+    current_month = str(pd.Timestamp.today().to_period("M"))
+
     added = apply_recurring_to_month(current_month)
     if added:
         st.sidebar.success(f"Applied {added} recurring items to {current_month}")
